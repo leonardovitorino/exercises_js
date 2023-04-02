@@ -60,8 +60,8 @@ const js = programmingLanguage[0] + programmingLanguage[4]
 */
 
 const mozilla = 'Mozilla Developer Network'
-const mdn = mozilla.slice(0, 3)
-//console.log(mdn)
+const mdn = mozilla[0] + mozilla[8] + mozilla[18]
+// console.log(mdn)
 
 /*
 07 - Comente o console.log acima, e,
@@ -80,8 +80,7 @@ const mdn = mozilla.slice(0, 3)
 */
 
 let randomWord = 'Araponga'
-const lastChar = randomWord.length - 1
-//console.log(randomWord.charAt(lastChar))
+// console.log(randomWord[randomWord.length - 1])
 
 /*
 09 - Comente o console.log acima, e,
@@ -196,9 +195,9 @@ episodes += 4
 - Exiba a "allEpisodes" no console.
 */
 
-const allEpisodes = 'O No de episódios é: NUMERO_DE_EPISÓDIOS'
+const allEpisodes = 'O nº de episódios é: NUMERO_DE_EPISÓDIOS'
 
-//console.log(allEpisodes.replace('NUMERO_DE_EPISÓDIOS', episodes))
+// console.log(allEpisodes.replace('NUMERO_DE_EPISÓDIOS', episodes))
 
 
 /*
@@ -227,8 +226,8 @@ const bookMessage = '\'O Conto da Aia\' é um dos livros mais vendidos da décad
 */
 
 const name = 'walter white'
-let newName = name.replace('w', 'W').replace('w', 'W')
-//console.log(newName)
+let newName = name[0].toUpperCase() + name.slice(1, 6) + ' ' + name[7].toUpperCase() + name.slice(8, 12)
+// console.log(newName)
 
 /*
 22 - Comente o console.log acima, e,
@@ -240,5 +239,5 @@ let newName = name.replace('w', 'W').replace('w', 'W')
 - Exiba a "newName" no console;
 */
 
-newName = `${newName}`
+newName = `${name[0].toUpperCase() + name.slice(1, 6) + ' ' + name[7].toUpperCase() + name.slice(8, 12)}`
 console.log(newName)
