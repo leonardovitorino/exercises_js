@@ -7,6 +7,20 @@
   - Exiba o resultado no console, sem inserir um console.log() dentro da função.
 */
 
+function multiplicationTwoNumber(num1, num2) {
+  return `${num1} * ${num2} = ${num1 * num2}`
+}
+
+let result = multiplicationTwoNumber(undefined, 5)
+console.log(result)
+
+if (typeof multiplicationTwoNumber.num1 !== 'number' || typeof multiplicationTwoNumber.num2 !== 'number') {
+  result = multiplicationTwoNumber(2, 5)
+}
+
+console.log(result)
+
+
 /*
   02
 
