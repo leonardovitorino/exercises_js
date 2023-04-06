@@ -11,14 +11,14 @@ function multiplicationTwoNumber(num1, num2) {
   return `${num1} * ${num2} = ${num1 * num2}`
 }
 
-let result = multiplicationTwoNumber(undefined, 5)
-console.log(result)
+// let result = multiplicationTwoNumber(undefined, 5)
+// console.log(result)
 
 if (typeof multiplicationTwoNumber.num1 !== 'number' || typeof multiplicationTwoNumber.num2 !== 'number') {
   result = multiplicationTwoNumber(2, 5)
 }
 
-console.log(result)
+// console.log(result)
 
 
 /*
@@ -28,6 +28,13 @@ console.log(result)
     **function expression** que retorne o resultado da **divisão** entre esses  
     2 números.
 */
+
+const TwoNumberResult = function (num3, num4) {
+  return `${num3} * ${num4} = ${num3 * num4}`
+}
+
+let newResult = TwoNumberResult(2, 5)
+console.log(newResult)
 
 /*
   03
