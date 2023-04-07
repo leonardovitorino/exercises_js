@@ -34,7 +34,7 @@ const TwoNumberResult = function (num3, num4) {
 }
 
 let newResult = TwoNumberResult(2, 5)
-console.log(newResult)
+// console.log(newResult)
 
 /*
   03
@@ -48,6 +48,17 @@ console.log(newResult)
 
   "Esta é a Xª vez que essa string é exibida."
 */
+
+function parameter (randomNumber) {
+  return randomNumber
+}
+
+let number = parameter(15)
+
+
+for (let i = 1; i <= 7; i++) {
+  console.log(`Esta é a ${i}ª vez que essa string '${number}' é exibida`)
+}
 
 /*
   04
