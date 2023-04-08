@@ -49,16 +49,16 @@ let newResult = TwoNumberResult(2, 5)
   "Esta é a Xª vez que essa string é exibida."
 */
 
-function parameter (randomNumber) {
-  return randomNumber
-}
+// function parameter (randomNumber) {
+  // return randomNumber
+// }
+// 
+// let number = parameter(15)
 
-let number = parameter(15)
 
-
-for (let i = 1; i <= 7; i++) {
-  console.log(`Esta é a ${i}ª vez que essa string '${number}' é exibida`)
-}
+// for (let i = 1; i <= 7; i++) {
+  // console.log(`Esta é a ${i}ª vez que essa string '${number}' é exibida`)
+// }
 
 /*
   04
@@ -72,6 +72,14 @@ for (let i = 1; i <= 7; i++) {
 */
 
 const millennialWords = ['lol', 'yolo', 'troll', 'stalkear', 'selfie', 'influencer', 'crush', 'fitness', 'hater', 'bae', 'random', 'kawaii', 'outfit', 'mood', 'fail']
+
+const newArray = []
+
+for (let i = 0; i < millennialWords.length; i++) {
+  newArray.push(millennialWords[i].toUpperCase())
+}
+
+console.log(newArray)
 
 /*
   05
