@@ -122,7 +122,7 @@ const removeLastItemOnArray = (array = []) => {
   return array
 }
 
-console.log(removeLastItemOnArray(employees))
+// console.log(removeLastItemOnArray(employees))
 
 /*
   08
@@ -130,6 +130,16 @@ console.log(removeLastItemOnArray(employees))
   - Crie uma função que retorna se o valor passado como argumento em sua  
     invocação é null.
 */
+
+const isNull = (item) => {
+  if (item === null) {
+    return 'is null'
+  } else {
+    return 'not null'
+  }
+} 
+
+// console.log(isNull('teste'))
 
 /*
   09
@@ -141,6 +151,18 @@ console.log(removeLastItemOnArray(employees))
     argumento a função que exibe seu nome no console e veja se o nome realmente  
     foi exibido.
 */
+
+const myFunc = callback => {
+
+  myName()
+  callback(myName)
+}
+
+const myName = (name = 'Leonardo') => {
+  console.log(name)
+}
+
+myFunc(item => {})
 
 /*
   10
