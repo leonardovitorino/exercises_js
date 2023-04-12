@@ -152,17 +152,15 @@ const isNull = (item) => {
     foi exibido.
 */
 
-const myFunc = callback => {
-
-  myName()
-  callback(myName)
+const myFunc = (YourName) => {
+  console.log(`Meu nome é ${YourName}`)
 }
 
-const myName = (name = 'Leonardo') => {
-  console.log(name)
+const myName = (name, callback) => {
+  callback(name)
 }
 
-myFunc(item => {})
+console.log(myName('Leonardo', myFunc))
 
 /*
   10
@@ -174,6 +172,17 @@ myFunc(item => {})
   - Faça com que a invocação da função descrita no 1º item deste exercício (10)  
     resulte no triplo de 33.
 */
+
+const exibition = (callback) => {
+  console.log(`Result: ${callback}`)
+}
+
+const tripleValue = (number, callback) => {
+  let total = number * 3
+  callback(total)
+}
+
+console.log(tripleValue(5, exibition))
 
 /*
   11
