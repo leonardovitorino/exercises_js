@@ -160,7 +160,7 @@ const myName = (name, callback) => {
   callback(name)
 }
 
-console.log(myName('Leonardo', myFunc))
+// console.log(myName('Leonardo', myFunc))
 
 /*
   10
@@ -182,7 +182,7 @@ const tripleValue = (number, callback) => {
   callback(total)
 }
 
-console.log(tripleValue(5, exibition))
+// console.log(tripleValue(5, exibition))
 
 /*
   11
@@ -195,6 +195,10 @@ console.log(tripleValue(5, exibition))
 
 const numbers = [1, 2, 3]
 
+// const forEachTeste = numbers.forEach((numbers, index, array) => {
+  // console.log(`O ${index}º item do array ${array} é ${numbers}.`)
+// })
+
 /*
   12
  
@@ -206,9 +210,15 @@ const numbers = [1, 2, 3]
 const letters = ['v', 'e', 'p']
 let lettersCopy = []
 
-for (let i = 0; i < letters.length; i++) {
-  lettersCopy.push(letters[i])
-}
+// for (let i = 0; i < letters.length; i++) {
+  // lettersCopy.push(letters[i])
+// }
+
+const inputCharactere = letters.forEach((letters) => {
+  lettersCopy.push(letters)
+})
+
+// console.log(lettersCopy)
 
 /*
   13
@@ -239,7 +249,11 @@ const review = [
 
 let paragraphs = ''
 
-  // section.innerHTML = paragraphs
+review.forEach(review => {
+  paragraphs += `<p>${review}</p>`
+})
+
+section.innerHTML = paragraphs
 
 /*
   14
