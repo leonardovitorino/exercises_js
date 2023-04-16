@@ -17,7 +17,9 @@
 // return String(value)
 // }
 
-const convertToString = () => String(value)
+const convertToString = value => String(value)
+
+console.log(typeof convertToString(true))
 
 
 /*
@@ -27,13 +29,9 @@ const convertToString = () => String(value)
     recebida por parâmetro possui.
 */
 
-const quantityString = (sentence) => {
-  let total = 0
-  total = sentence.length
-  return total
-}
+const getStringLength = string => string.length
 
-// console.log(quantityString('teste com um texto maior'))
+console.log(getStringLength('olá'))
 
 /*
   03
@@ -45,11 +43,9 @@ const quantityString = (sentence) => {
   "CHOCOTONE E OVO DE PÁSCOA JUNTOS NO MERCADO EM PLENO FEVEREIRO"
 */
 
-const toLowerCase = (string) => {
-  return string.toLowerCase()
-}
+const convertToLowerCase = string => string.toLowerCase()
 
-// console.log(toLowerCase('CHOCOTONE E OVO DE PÁSCOA JUNTOS NO MERCADO EM PLENO FEVEREIRO'))
+console.log(convertToLowerCase('CHOCOTONE E OVO DE PÁSCOA JUNTOS NO MERCADO EM PLENO FEVEREIRO'))
 
 /*
   04
@@ -58,11 +54,9 @@ const toLowerCase = (string) => {
   - Ao ser invocada, a função deve retornar o index do caractere na string.
 */
 
-const indexString = (caractere, string) => {
-  return string.indexOf(caractere)
-}
+const getIndex = (character, string) => string.indexOf(character)
 
-// console.log(indexString('d', 'lindo'))
+console.log(getIndex('2', '123'))
 
 /*
   05
@@ -71,29 +65,9 @@ const indexString = (caractere, string) => {
     passado por argumento existe no array (também passado por argumento).
 */
 
-const existOnArray = (item, array = []) => {
+const isItemIncluded = (item, array = []) => array.includes(item)
 
-  let exist = 0
-  let noExist = 0
-
-  for (let i = 0; i < array.length; i++) {
-    if (item === array[i]) {
-      exist++
-    } else {
-      noExist++
-    }
-  }
-
-  if (exist !== 0) {
-    return true
-  } else {
-    return false
-  }
-}
-
-const employees = ['Fabio', 'Alexandre', 'Ana', 'Flavia']
-
-// console.log(existOnArray('Flavia', employees))
+console.log(isItemIncluded(3, [7, 3, 1]))
 
 /*
   06
@@ -102,14 +76,9 @@ const employees = ['Fabio', 'Alexandre', 'Ana', 'Flavia']
     argumentos em sua invocação;
 */
 
-const concatArrays = (arrayOne = [], arrayTwo = []) => {
-  const newArray = arrayOne.concat(arrayTwo)
-  return newArray
-}
+const concatArrays = (firtsArray, secondArray) => firtsArray.concat(secondArray)
 
-const newEmployess = ['Leonardo', 'Ricardo', 'Beatriz', 'Fernanda']
-
-// console.log(concatArrays(employees, newEmployess))
+console.log(concatArrays([1, 2, 3], [4, 5, 6]))
 
 /*
   07
@@ -117,12 +86,12 @@ const newEmployess = ['Leonardo', 'Ricardo', 'Beatriz', 'Fernanda']
   - Crie uma função que retorna o array passado como argumento em sua invocação,  
     mas com o último item removido.
 */
-const removeLastItemOnArray = (array = []) => {
+const removeLastItem = array => {
   array.pop()
-  return array
+  return array 
 }
 
-// console.log(removeLastItemOnArray(employees))
+console.log(removeLastItem([1, 2, 3]))
 
 /*
   08
@@ -131,15 +100,9 @@ const removeLastItemOnArray = (array = []) => {
     invocação é null.
 */
 
-const isNull = (item) => {
-  if (item === null) {
-    return 'is null'
-  } else {
-    return 'not null'
-  }
-} 
+const isNull = value => value === null
 
-// console.log(isNull('teste'))
+console.log(isNull(null))
 
 /*
   09
@@ -152,15 +115,15 @@ const isNull = (item) => {
     foi exibido.
 */
 
-const myFunc = (YourName) => {
-  console.log(`Meu nome é ${YourName}`)
+const invokeCallback = callback => {
+  callback()
 }
 
-const myName = (name, callback) => {
-  callback(name)
+const logName = () => {
+  console.log('Leonardo')
 }
 
-// console.log(myName('Leonardo', myFunc))
+invokeCallback(logName)
 
 /*
   10
@@ -173,16 +136,14 @@ const myName = (name, callback) => {
     resulte no triplo de 33.
 */
 
-const exibition = (callback) => {
-  console.log(`Result: ${callback}`)
+const callCallback = (value, callback) => {
+  return callback(value)
 }
 
-const tripleValue = (number, callback) => {
-  let total = number * 3
-  callback(total)
-}
+const triple = number => number * 3
 
-// console.log(tripleValue(5, exibition))
+console.log(callCallback(33, triple))
+
 
 /*
   11
@@ -195,9 +156,14 @@ const tripleValue = (number, callback) => {
 
 const numbers = [1, 2, 3]
 
-// const forEachTeste = numbers.forEach((numbers, index, array) => {
-  // console.log(`O ${index}º item do array ${array} é ${numbers}.`)
-// })
+const showNumbersInfo = (item, index, array) => {
+  const itemPosition = index + 1
+  const items = array.join(', ')
+
+  console.log(`O ${itemPosition}º item do array [${items}] é ${item}.`)
+}
+
+numbers.forEach(showNumbersInfo)
 
 /*
   12
@@ -214,11 +180,11 @@ let lettersCopy = []
   // lettersCopy.push(letters[i])
 // }
 
-const inputCharactere = letters.forEach((letters) => {
-  lettersCopy.push(letters)
+letters.forEach(letter => {
+  lettersCopy.push(letter)
 })
 
-// console.log(lettersCopy)
+console.log(lettersCopy)
 
 /*
   13
@@ -249,9 +215,11 @@ const review = [
 
 let paragraphs = ''
 
-review.forEach(review => {
-  paragraphs += `<p>${review}</p>`
-})
+const createParagraphs = paragraphs => {
+  paragraphs += `<p>${paragraphs}</p>`
+}
+
+review.forEach(createParagraphs)
 
 section.innerHTML = paragraphs
 
@@ -276,25 +244,26 @@ section.innerHTML = paragraphs
     pessoas já mencionadas no início da mensagem).
 */
 
-const listOfPeople = ['Lucas', 'Gabriela', 'Leonardo', 'William', 'Guilherme']
+const getLikesMessage = (names = []) => {
 
-const peopleQuantity = (array = []) => {
-  if (array.length === 0) {
-    return 'Ninguem curtiu isso'
-  }
-  else if (array.length === 1) {
-    return `${array[0]} curtiu isso`
-  }
-  else if (array.length === 2) {
-    return `${array[0]} e ${array[1]} curtiram isso`
-  }
-  else if (array.length === 3) {
-    return `${array[0]}, ${array[1]} e ${array[2]} curtiram isso`
-  }
-  else {
-    return `${array[0]}, ${array[1]} e mais ${array.length - 2} pessoas curtiram isso`
+  const firstName = names[0]
+  const secondName = names[1]
+  const thirdName = names[2]
+  const totalNamesMinusTwo = names.length - 2
+
+  switch (names.length) {
+    case 0:
+      return 'Ninguém curtiu isso'
+    case 1:
+      return `${firstName} curtiu isso`
+    case 2:
+      return `${firstName} e ${secondName} curtiram isso`
+    case 3:
+      return `${firstName}, ${secondName} e ${thirdName} curtiram isso`
+    default:
+      return `${firstName}, ${secondName} e mais ${totalNamesMinusTwo} pessoas curtiram isso`
   }
 }
 
-console.log(peopleQuantity(listOfPeople))
+console.log(getLikesMessage('Lucas', 'Gabriela', 'Leonardo', 'William', 'Guilherme'))
 
