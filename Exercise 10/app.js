@@ -15,9 +15,7 @@ let cat = {
     age: 28,
     color: 'Preto',
     bestFriends: ['Jerry', 'Mickey'],
-    sound: function () {
-        return 'Meow'
-    }
+    sound: () => 'Meow'
 }
 
 console.log(cat)
@@ -51,9 +49,9 @@ console.log(cat.age)
     adicionado.
 */
 
-const addFriend = value => cat.bestFriends.push(value)
+const addFriend = value => object.bestFriends.push(value)
 
-addFriend('Donald')
+addFriend('Donald', cat)
 
 console.log(cat.bestFriends)
 
@@ -66,11 +64,13 @@ console.log(cat.bestFriends)
     colchetes.
 */
 
-const addColor = value => cat['color'] = value
+const changeColor = object => object['color'] += ` and blue`
 
-addColor('Yellow')
+changeColor(cat)
 
-// console.log(cat['color'])
+const colorProperty = 'color'
+
+ console.log(cat[colorProperty])
 
 /*
   06
@@ -100,20 +100,14 @@ let dog = {
   age: 21,
   color: 'Marrom',
   bestFriends: ['Suza', 'Ju'],
-  sound: function () {
-    return 'Auau'
-  }
+  sound: () => 'Auau'
 }
 
-const sumAges = (firstObject, secondObject) => {
+const getAgeMessage = (cat, dog) => `A soma das idades de ${cat.name} e ${dog.name} é ${cat.age + dog.age}.`
 
-  const catName = cat.name
-  const dogName = dog.name
+const ageMessage = getAgeMessage(cat, dog)
 
-  console.log(`A soma das idades de ${catName} e ${dogName} é ${cat.age + dog.age}`)
-}
-
-sumAges(cat, dog)
+console.log(ageMessage)
 
 /*
   08
@@ -130,31 +124,16 @@ sumAges(cat, dog)
 // 
   // return false
 // }
+
+const isAnSUV = car => [
+  'Honda HR-V', 
+  'Jeep Renegade', 
+  'Ford EcoSport', 
+  'Hyundai iX35'
+].includes(car)
   
-  // console.log(isAnSUV('Honda Civic'))
-  // console.log(isAnSUV('Ford EcoSport'))
-
-  const car = 'Honda HR-V'
-
-  const isAnSUV = car => {
-
-    switch (car) {
-      case 'Honda HR-V':
-        return true
-      case 'Jeep Renegade':
-        return true
-      case 'Ford EcoSport':
-        return true
-      case 'Hyundai iX35':
-        return true
-      default:
-        return false
-      }
-  }
-
-  console.log(isAnSUV(car))
-
-  
+console.log(isAnSUV('Honda HR-V',))
+console.log(isAnSUV('Ford EcoSport'))
   /*
     09
   
@@ -168,23 +147,16 @@ sumAges(cat, dog)
     - Teste a função, exibindo no console a mensagem de cada propriedade.
   */
 
-    const func = type => {
-      let obj = {
-        null: 'Seta, explicitamente, uma variável sem valor',
-        undefined: 'Representa um valor não-setado',
-        object: 'Arrays, Datas, Objetos literais, Funções, ect.'
-      }
+ const getTypeDefinition = type => {
+   const obj = {
+     null: 'Seta, explicitamente, uma variável sem valor',
+     undefined: 'Representa um valor não-setado',
+     object: 'Arrays, Datas, Objetos literais, Funções, ect.'
+   }
+   
+   return obg[type]
+ }
 
-      switch (typeof type) {
-        case 'null':
-          return obj.null
-        case 'undefined':
-          return obj.undefined
-        case 'object':
-          return obj.object
-        default:
-          return 'Não corresponde a nenhuma das opções'
-      }
-    }
-  
-    console.log(func(dog))
+ console.log(getTypeDefinition('null'))
+ console.log(getTypeDefinition('object'))
+ console.log(getTypeDefinition('undefined'))
