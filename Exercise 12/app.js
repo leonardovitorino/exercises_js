@@ -27,10 +27,16 @@ const best2019Movies = [
     { title: 'A Vida Invisível', directedBy: 'Karim Aïnouz' }
   ]
 
-  // console.log(`Segundo o site Omelete, os melhores filmes de 2019 são:
-  // - ${best2019Movies[0].title}, dirigido por ${best2019Movies[0].directedBy}
-  // - ${best2019Movies[1].title}, dirigido por ${best2019Movies[1].directedBy}
-  // - ${best2019Movies[3].title}, dirigido por ${best2019Movies[3].directedBy}`)
+let message = 'Segundo o site Omelete, os melhores filmes de 2018 são:'
+
+const generateMovieMessage = movie => {
+  message += `
+  - ${movie.title}, dirigido por ${movie.directedBy}`
+}
+
+best2019Movies.forEach(generateMovieMessage)
+
+// console.log(message)
   
   /*
     02
@@ -65,18 +71,17 @@ const best2019Movies = [
       },
       country: 'Brasil'
     },
-    message: [
-      { title: 'Vídeos recentes de Roger Melo:' },
-      { firstVideo: 'Introdução ao TDD - Parte 02 | JavaScript | Jest' },
-      { secondVideo: 'Introdução ao TDD | JavaScript | Jest' },
-      { thirdVideo: 'Higher-order Functions | JavaScript' }
-    ],
-  }
+    getRecentVideos () {
+      console.log(`Vídeos recentes de ${this.name}:`)
 
-  // youtubeUser.message.forEach (message => {
-    // console.log(message)
-  // })
+      this.videos.recentVideos.forEach(video => {
+        console.log(video.title)
+      })
+    },
+  }
   
+
+  youtubeUser.getRecentVideos()
   /*
     03
   
@@ -126,7 +131,7 @@ const best2019Movies = [
   
   const fourthNumber = 5.5
 
-  console.log(Math.round(fourthNumber))
+  console.log(Math.trunc(fourthNumber))
   
   /*
     08
@@ -136,4 +141,4 @@ const best2019Movies = [
   */
 
       const randonNumber = Math.random()
-      console.log(Math.round(randonNumber * 100))
+      console.log(Math.round(randonNumber * 10))
