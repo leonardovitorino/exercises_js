@@ -154,7 +154,7 @@ console.log(isAnSUV('Ford EcoSport'))
      object: 'Arrays, Datas, Objetos literais, Funções, ect.'
    }
    
-   return obg[type]
+   return obj[type]
  }
 
  console.log(getTypeDefinition('null'))
