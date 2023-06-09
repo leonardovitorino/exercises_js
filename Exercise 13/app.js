@@ -12,7 +12,17 @@ const getCatInfo = () => {
     const name = 'Marcos'
     let age = 3
     const color = 'Cinza'
+
+    return { name, age, color} //Shorthand properties - name: name não é necessário
   }
+
+  // const name = getCatInfo().name
+  // const age = getCatInfo().age
+  // const color = getCatInfo().color
+
+  const { name, age, color } = getCatInfo() //Destructuring assignment em objetos
+
+  console.log(`${name} é um gato ${color} de ${age} anos.`)
   
   /*
     02
@@ -29,7 +39,9 @@ const getCatInfo = () => {
       const extraInternal = () => {
         console.log(movie.toUpperCase())
       }
+      extraInternal()
     }
+    internal()
   }
   
   external()
@@ -44,6 +56,9 @@ const getCatInfo = () => {
   */
   
   let randomNumbers = [3, 2, 1]
+
+  randomNumbers.reverse()
+  console.log(randomNumbers)
   
   /*
     04
@@ -58,6 +73,9 @@ const getCatInfo = () => {
     function getMessage () { return 'hi' },
     [ 5, 96, 53  ]
   ]
+
+  const firstElement = crazyArray.shift()
+  console.log(firstElement)
   
   /*
     05
@@ -75,6 +93,9 @@ const getCatInfo = () => {
     { name: 'Zequinha', age: 7, gender: 'Male', breed: 'Poodle' },
     { name: 'Xica', age: 6, gender: 'Female', breed: 'Chihuahua' }
   ]
+
+  const found = dogs.find(dog => dog.name === 'Zequinha')
+  console.log(found)
   
   /*
     06
@@ -107,6 +128,10 @@ const getCatInfo = () => {
       </article>
     </section>
   */
+
+    const h1 = document.querySelector('.main-title')
+
+    console.log(h1)
   
   /*
     07
@@ -115,3 +140,6 @@ const getCatInfo = () => {
       página, através da classe deles;
     - Exiba esse NodeList no console.
   */
+
+    const allH2 = document.querySelectorAll('.secondary-title')
+    console.log(allH2)
