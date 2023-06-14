@@ -6,6 +6,13 @@
   - Exiba no console os elementos filhos da ul com a classe já inserida.
 */
 
+const ul = document.querySelector('ul')
+
+Array.from(ul.children).forEach(li => {
+  li.classList.add('videos')
+})
+
+console.log(document.querySelectorAll('.videos'))
 
 
 /*
