@@ -18,7 +18,7 @@
 Utilize os espaços entre os comentários abaixo para executar os códigos dos exercícios. Inclusive este.
 */
 
-//console.log('Grande poderes trazem grandes responsabilidades')
+console.log('Grande poderes trazem grandes responsabilidades')
 
 /*
 04 - Comente o console.log acima, e:
@@ -69,7 +69,7 @@ const mdn = mozilla[0] + mozilla[8] + mozilla[18]
 - Exiba no console do browser a quantidade de caracteres que a constante "programmingLanguage" possui;
 */
 
-//console.log(programmingLanguage.length)
+console.log(programmingLanguage.length)
 
 /*
 08 - Comente o console.log acima, e,
@@ -112,7 +112,7 @@ const upperCaseMessage = winterMessage.toUpperCase()
 - Exiba, no console, o index do caractere "v" da "winterMessage";
 */
 
-//console.log(winterMessage.indexOf('v'))
+console.log(winterMessage.indexOf('v'))
 
 /*
 12 - Comente o console.log acima, e,
@@ -120,7 +120,7 @@ const upperCaseMessage = winterMessage.toUpperCase()
 - Exiba, no console, o index da última ocorrência do caractere "n" da "winterMessage".
 */
 
-//console.log(winterMessage.lastIndexOf('n'))
+console.log(winterMessage.lastIndexOf('n'))
 
 /*
 13 - Comente o console.log acima, e,

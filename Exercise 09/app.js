@@ -13,10 +13,6 @@
     valor no console.
 */
 
-// function convertToString (value) {
-// return String(value)
-// }
-
 const convertToString = value => String(value)
 
 console.log(typeof convertToString(true))
@@ -176,9 +172,6 @@ numbers.forEach(showNumbersInfo)
 const letters = ['v', 'e', 'p']
 let lettersCopy = []
 
-// for (let i = 0; i < letters.length; i++) {
-  // lettersCopy.push(letters[i])
-// }
 
 letters.forEach(letter => {
   lettersCopy.push(letter)

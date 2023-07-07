@@ -36,7 +36,7 @@ const generateMovieMessage = movie => {
 
 best2019Movies.forEach(generateMovieMessage)
 
-// console.log(message)
+console.log(message)
   
   /*
     02

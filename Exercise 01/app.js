@@ -21,7 +21,7 @@ Utilize os espaços entre os comentários abaixo para executar os códigos dos
 exercícios. Inclusive o alert mencionado acima.
 */
 
-// alert('JS is Awesome!')
+alert('JS is Awesome!')
 
 
 /*

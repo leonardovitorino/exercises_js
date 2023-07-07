@@ -15,7 +15,7 @@ let cat = {
     age: 28,
     color: 'Preto',
     bestFriends: ['Jerry', 'Mickey'],
-    sound: () => 'Meow'
+    sound: () => 'Meow',
 }
 
 console.log(cat)

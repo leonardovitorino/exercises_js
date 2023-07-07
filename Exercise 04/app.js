@@ -16,7 +16,7 @@
 const my3FavoriteTVShows = ['Black Mirror', 'Breaking Bad', 'Watchmen']
 
 const sentence = `Minhas 3 séries favoritas são: ${my3FavoriteTVShows.join(', ').replace(', W', ' e W')}`
-//console.log(sentence)
+console.log(sentence)
 
 /*
   02 - Comente o console.log() acima e:
@@ -25,7 +25,7 @@ const sentence = `Minhas 3 séries favoritas são: ${my3FavoriteTVShows.join(', 
     possui 3 itens.
 */
 
-//console.log(my3FavoriteTVShows.length === 3)
+console.log(my3FavoriteTVShows.length === 3)
 
 /*
   03 - Comente o console.log() acima e:
@@ -40,7 +40,7 @@ const sentence = `Minhas 3 séries favoritas são: ${my3FavoriteTVShows.join(', 
 const randomTVShow = 'Watchmen'
 const isRandomTVShowIncluded = my3FavoriteTVShows.includes(randomTVShow)
 
-//console.log(isRandomTVShowIncluded)
+console.log(isRandomTVShowIncluded)
 
 /*
   04 - Comente o console.log() acima e:
@@ -55,7 +55,7 @@ const isRandomTVShowIncluded = my3FavoriteTVShows.includes(randomTVShow)
 
 const typeSentence = `O tipo de dado que a const "isRandomTVShowIncluded" armazena é: ${typeof isRandomTVShowIncluded}`
 
-//console.log(typeSentence)
+console.log(typeSentence)
 
 /*
   05 - Comente o console.log() acima e:
@@ -85,7 +85,7 @@ console.log(`A string que a "typeSentence" armazena tem mais de ${NumberToCheck}
 */
 
 const falsyValues = [0, "", false, '', ``, null, undefined, NaN]
-//console.log(`Todos os ${falsyValues.length} itens do array "falsyValues" são falsy. Inclusive o ${falsyValues[2]}`)
+console.log(`Todos os ${falsyValues.length} itens do array "falsyValues" são falsy. Inclusive o ${falsyValues[2]}`)
 
 /*
   07 - Comente o console.log() acima e:
@@ -99,7 +99,7 @@ const falsyValues = [0, "", false, '', ``, null, undefined, NaN]
 const crazyOperation = null + 1
 const crazyConversion = Boolean(crazyOperation)
 
-//console.log(crazyConversion)
+console.log(crazyConversion)
 
 //o valor da true pq 0 + 1 é 1, sendo então verdadeiro
 
@@ -118,9 +118,9 @@ const crazyConversion = Boolean(crazyOperation)
 
 const ages = [31, 82, 61, 11]
 const agesSum = ages[0] + ages[2]
-//console.log(agesSum)
+console.log(agesSum)
 
-//console.log(`A soma do 1 e 3 item de "ages" é menor ou igual a 92. Essa afirmaçao é: ${agesSum <= 92}`)
+console.log(`A soma do 1 e 3 item de "ages" é menor ou igual a 92. Essa afirmaçao é: ${agesSum <= 92}`)
 
 /*
   09 - Comente o console.log() acima e:
@@ -133,7 +133,7 @@ const agesSum = ages[0] + ages[2]
 
 const isNotAString = typeof randomTVShow !== 'string'
 
-//console.log(isNotAString)
+console.log(isNotAString)
 
 /*
   10 - Comente o console.log() acima e:

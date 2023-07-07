@@ -19,11 +19,11 @@
 
 const animals = ['macaco', 'tucano', 'elefante', 'pavão', 'hipopótamo']
 
-// if (!animals.includes('leão')) {
-  // console.log('Existe um leão no array animals')
-// } else {
-  // console.log('Leão não existe no array animals.')
-// }
+if (!animals.includes('leão')) {
+  console.log('Existe um leão no array animals')
+} else {
+  console.log('Leão não existe no array animals.')
+}
 
 /*
   03
@@ -68,7 +68,7 @@ for (let i = 0; i < sentence.length; i++) {
   newSentence += sentence[i] + ' '
 }
 
-// console.log(newSentence)
+console.log(newSentence)
 
 /*
   05

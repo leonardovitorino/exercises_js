@@ -22,13 +22,9 @@ let brazilianFoods = []
 - Exiba a brazilianFoods no console.
 */
 
-//brazilianFoods[0] = 'Coxinha'
-//brazilianFoods[1] = null
-//brazilianFoods[2] = 'Brigadeiro'
-
 brazilianFoods.push('Coxunha', null, 'Brigadeiro')
 
-//console.log(brazilianFoods)
+console.log(brazilianFoods)
 
 /*
 04 - Comente o console.log acima e:
@@ -39,7 +35,7 @@ array "brazilianFoods" (null) seja substituído por "Pão de Queijo";
 */
 
 brazilianFoods[1] = 'Pão de Queijo'
-//console.log(brazilianFoods[1])
+console.log(brazilianFoods[1])
 
 /*
 05 - Comente o console.log acima e:
@@ -55,12 +51,10 @@ mas sem digitar os nomes das comidas diretamente;
 */
 
 const foodsInfo = `Até aqui, o array "brazilianFoods" possui ${brazilianFoods.length} itens: ${brazilianFoods[0]}, ${brazilianFoods[1]} e ${brazilianFoods[2]}.`
-//const foodsInfo = 'Até aqui, o array "brazilianFoods" possui NUMERO_DE_ITENS itens: NOME_DO_ITEM_1, NOME_DO_ITEM_2 e NOME_DO_ITEM_3.'
-//console.log(foodsInfo.replace('NUMERO_DE_ITENS', brazilianFoods.length).replace('NOME_DO_ITEM_1', brazilianFoods[0]).replace('NOME_DO_ITEM_2', brazilianFoods[1]).replace('NOME_DO_ITEM_3', brazilianFoods[2]))
 console.log(foodsInfo)
 
 /*
-06 - Comente o console.log acima e:
+06 - Comente o console.log acima 
 
 - Armazene um array com os itens "Chico" e "Zeca" em uma const  
 "maleDogNames";
@@ -75,7 +69,7 @@ const maleDogNames = ['Chico', 'Zeca']
 const femaleDogNames = ['Lilica', 'Matilda']
 let dogNames = maleDogNames.concat(femaleDogNames)
 
-//console.log(dogNames)
+console.log(dogNames)
 
 /*
 07 - Comente o console.log acima e:
@@ -86,7 +80,7 @@ let dogNames = maleDogNames.concat(femaleDogNames)
 - O resultado deve ser: "nome1, nome2, nome3, nome4".
 */
 
-//console.log(dogNames.join(', '))
+console.log(dogNames.join(', '))
 
 /*
 08 - Comente o console.log acima e:
@@ -101,10 +95,10 @@ utilizando o método adequado para isso;
 agora é "Lilica".
 */
 
-//console.log(dogNames)
-//dogNames.pop()
-//console.log(dogNames[dogNames.length - 1])
-//console.log(dogNames)
+console.log(dogNames)
+dogNames.pop()
+console.log(dogNames[dogNames.length - 1])
+console.log(dogNames)
 
 /*
 09 - Comente o console.log acima e:
@@ -120,9 +114,8 @@ apenas as letras iniciais dos nomes do array "dogNames";
 
 dogNames.push('Nina')
 
-//console.log(dogNames)
 const initials = `${dogNames[0][0] + dogNames[1][0] + dogNames[2][0] + dogNames[3][0] + dogNames[4][0]}`
-//console.log(initials)
+console.log(initials)
 
 /*
 10 - Comente o console.log acima e:
@@ -131,7 +124,7 @@ const initials = `${dogNames[0][0] + dogNames[1][0] + dogNames[2][0] + dogNames[
 - Utilize o método adequado para isso.
 */
 
-//console.log(initials.toLowerCase())
+console.log(initials.toLowerCase())
 
 /*
 11 - Comente o console.log acima e:
@@ -152,7 +145,7 @@ constante que você criou.
 console.log(dogNames)
 const dessert = `${dogNames[0].slice(3) + dogNames[1].slice(2) + dogNames[4].slice(2)}`.replace('n', 'd')
 
-//console.log(dessert)
+console.log(dessert)
 
 /*
 12 - Comente o console.log acima e:
