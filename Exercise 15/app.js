@@ -8,12 +8,12 @@
 
 const ul = document.querySelector('ul')
 
-Array.from(ul.children).forEach(li => {
-  li.classList.add('videos')
+Array.from(ul.children).forEach(element => {
+  element.classList.add('video')
 })
 
-console.log(document.querySelectorAll('.videos'))
-
+console.log(Array.from(ul.children))
+console.log(ul.children)
 
 /*
   02
@@ -22,7 +22,9 @@ console.log(document.querySelectorAll('.videos'))
     e exiba-o no console;
 */
 
+const h2 = document.querySelector('h2')
 
+console.log(h2.parentElement)
 
 /*
   03
@@ -30,7 +32,9 @@ console.log(document.querySelectorAll('.videos'))
   - Descubra quem é o próximo elemento irmão do h1 e exiba-o no console;
 */
 
+const h1 = document.querySelector('h1')
 
+console.log(h1.nextElementSibling)
 
 /*
   04
@@ -38,7 +42,7 @@ console.log(document.querySelectorAll('.videos'))
   - Descubra quem é o irmão anterior da ul e exiba-o no console;
 */
 
-
+console.log(ul.previousElementSibling)
 
 /*
   05
@@ -47,7 +51,13 @@ console.log(document.querySelectorAll('.videos'))
     exibida no console.
 */
 
+const lis = document.querySelectorAll('li')
 
+lis.forEach(li => {
+  li.addEventListener('click', event => {
+    console.log(event.target)
+  })
+})
 
 /*
   06
@@ -66,10 +76,24 @@ const videos = [{
     name: 'Como fazer requisições HTTP com o método fetch | JavaScript',
     length: '00:02:55'
   }]
-  
+
+  const button = document.querySelector('button')
+
+  button.addEventListener('click', () => {
+    videos.forEach(video => {
+      ul.innerHTML += `<li>${video.name}</li>`
+    })
+  })
+
   /*
     07
   
     - Se um clique no h1 acontecer, faça com que todos os elementos dentro do body 
       sejam removidos.
   */
+
+  h1.addEventListener('click', () => {
+    const body = document.querySelector('body')
+
+    body.remove()
+  })
