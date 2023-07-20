@@ -6,15 +6,39 @@
 */
 
 const div = document.querySelector('div')
+const elementsInsideDiv = Array.from(div.children)
+const h2 = document.querySelector('h2')
+const egg = document.querySelector('.egg')
+const button = document.querySelector('button')
 
-const children = Array.from(div.children)
+const showClickedElement = ({ target }) => {
+  const clickedElementName = target.tagName.toLowerCase()
 
-// children.forEach(element => {
-  // element.addEventListener('click', event => {
-    // console.log(`Clicou no ${event.target.localName}, filho da div.`)    
-    // event.stopPropagation
-  // })
-// })
+  if(clickedElementName === 'div') {
+    h2.textContent = 'Clicou na div.'
+    return
+  }
+  
+  h2.textContent = `Clicou no ${clickedElementName}, filho da div.`
+}
+
+const logCopyMessage = () => {
+  console.log('Texto copiado!')
+}
+
+const showCoordinates = ({ offsetX, offsetY }) => {
+  egg.textContent = `Eixo X: ${offsetX} | Eixo Y: ${offsetY}`
+}
+
+const changeEggColor = () => {
+  egg.style.background = 'lightgoldenrodyellow'
+}
+
+div.addEventListener('click', showClickedElement)
+h2.addEventListener('copy', logCopyMessage)
+egg.addEventListener('mousemove', showCoordinates)
+button.addEventListener('click', changeEggColor)
+
 
 /*
   02
@@ -32,21 +56,6 @@ const children = Array.from(div.children)
     filho da div, ao invés de ser exibida no console, seja inserida neste h2.
 */
 
-const h2 = document.querySelector('h2')
-
-children.forEach(element => {
-  element.addEventListener('click', event => {
-    h2.innerHTML += `<p>Clicou no ${event.target.localName}, filho da div.<p/>`
-
-    Array.from(h2.children).forEach(element => {
-      element.addEventListener('copy', () => {
-        console.log('Texto copiado')
-      })
-    })
-    event.stopPropagation
-  })
-})
-
 /*
   04
 
@@ -62,24 +71,12 @@ children.forEach(element => {
     "Eixo X: COORDENADA_EIXO_X | Eixo Y: COORDENADA_EIXO_Y".
 */
 
-const egg = document.querySelector('.egg')
-
-egg.addEventListener('mousemove', event => {
-  egg.innerText = `Eixo X: ${event.clientX} | Eixo Y: ${event.clientY}`
-})
-
 /*
   06
 
   - Modifique a cor do ovo para "lightgoldenrodyellow" quando o botão for 
     clicado.
 */
-
-const button = document.querySelector('button')
-
-button.addEventListener('click', () => {
-  egg.setAttribute('style', 'background:lightgoldenrodyellow')
-  })
 
 /*
   07
@@ -102,6 +99,9 @@ const people = [
   { id: 9, name: 'Hamilton Silva', profession: 'Advogado' }
 ]
 
-if (people.some(people => people.profession === 'Front-end developer')) {
-  console.log('O array people contém, no mínimo, um(a) Front-end developer.')
+const isSomePersonFrontendDeveloper = people.some(({ profession }) => 
+  profession === 'Front-end developer')
+
+if (isSomePersonFrontendDeveloper) {
+    console.log('O array people contém, no mínimo, um(a) Front-end developer.')
 }
